@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Tracker</title>
+</head>
+<body>
+ <h1>My Job Applications</h1>
+    <ul>
+        {% for job in jobs %}
+        <li>{{ job.company_name }} - {{ job.job_title }} ({{ job.status }})</li>
+        {% empty %}
+        <li>No job applications found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
